@@ -1,0 +1,48 @@
+General Information about your Computer Science Account
+
+
+Directory Access
+----------------
+
+
+Your account has been set up so that your home directory can only be
+accessed by you, that is, other users cannot read files in your home
+directory.  It has been set up this way primarily to protect new users
+who are unfamiliar with the UNIX file system and protection modes.
+
+However, there are programs that need access to your home directory. 
+The "finger" command, for example, looks in your home directory for a
+file named ".plan".  If your directory is protected it cannot read this
+file and anyone who uses the "finger" command to find out information
+about you will get the message that "Plan file exists, but is unreadable."
+
+If you would like the files in your home directory to be accessible to
+other users, you will need to use the "chmod" command to change the
+permissions on your home directory.  You can then create sub-directories
+to for any files that you want to keep private.
+
+Example
+-------
+
+This will work on both the UNIX and DOS machines in the lab:
+NOTE:  replace <text> with the appropriate names, for example:  mkdir prog1
+
+	cd ..		       # move up one directory
+
+	chmod 755 <username>   # change your home directory so that anyone 
+			       # can read the files in your home directory.
+
+	cd <username>	       # go back to your home directory
+
+	mkdir <directory_name> # make a new directory 
+
+	chmod 700 <directory_name> # set the permissions on the directory 
+			           # so that only you have access to it
+
+	ls -l		       # provides a long listing of files which shows 
+			       # the permissions of files and directories
+
+   ** Refer to the manual pages for more info on cd, chmod, mkdir, and ls
+	by typing man <command_name> (ie. man cd, man chmod, etc.)  **
+
+

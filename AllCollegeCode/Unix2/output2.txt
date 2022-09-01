@@ -1,0 +1,25 @@
+enter 10 strings: The sorted strings are: 
+C3PO
+Chewbacca
+Darth Vader
+Gr. Moff Tarkin
+Han Solo
+Luke Skywalker
+Obi-wan Kenobi
+Princess Leia
+R2D2
+jabba the hutt
+Str: Some characters from Star Wars Episode IV (1977)
+Size: 48
+Capacity: 64
+Some characters from Star Wars Episode IV (1977) is firstVal: 4.5
+ptr: 0x7ffe953290e8
+Address of val: 0x7ffe953290e8
+Address of ptr: 0x7ffe953290e0
+*ptr: 4.5
+
+Luke Skywalker
+Han Solo
+Princess Leia
+Darth Vader
+Chewbacca

@@ -1,0 +1,5 @@
+What is the difference between cd and pushd?
+When you use cd, it doesn't remember where you came from; with pushd, the original directory is saved on a stack.
+When you use cd, it doesn't remember where you came from; with pushd, the original directory is saved on a stack.
+The program cd is faster than the built-in pushd.
+The links of cd are faster than the links of pushd.

@@ -1,0 +1,3 @@
+Francesco Messina
+
+The Big O of clear() would be O(n) because the it only calls clear() function in vector class, which onoly calls the destructors. making it be O(n).

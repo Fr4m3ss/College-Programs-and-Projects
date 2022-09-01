@@ -1,0 +1,12 @@
+:- dynamic likes/2.
+
+likes(george, kate).
+likes(george, susie).
+likes(george, wine).
+likes(susie, wine).
+likes(kate, gin).
+likes(kate, susie).
+
+friends(X,Y):-likes(X,Z),likes(Y,Z).
+
+%friends(X,Y):-likes(X,Z),likes(Y,Z),X\==Y.

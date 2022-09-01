@@ -1,0 +1,9 @@
+4
+Duck, Daffy
+Math 90 86 80 95 100 99 96 93
+Dipwart, Marvin
+English 88 75 90
+White, Walter
+History 95 76 85 91
+Crack Corn, Jimmy
+Math 44 58 23 76 50 59 77 68

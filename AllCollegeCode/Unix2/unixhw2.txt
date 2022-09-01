@@ -1,0 +1,10 @@
+//Frankie Messina
+//Unix HW #2
+//11/20/19
+
+1. g++ -o myStrings strings3.cpp
+2. myStrings < test1.txt
+3. myStrings < test1.txt > output2.txt
+4. cat test1.txt | grep ^'[A-Z]' | grep -v '[0-9]' | grep -v '[(),.-]' >> output2.txt
+5. ls -l *.txt > list.out
+6. tar -cvf unix2.tar *.txt *.out 

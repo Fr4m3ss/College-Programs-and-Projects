@@ -1,0 +1,19 @@
+beepers 2 6 1
+beepers 3 5 1
+beepers 3 7 1
+beepers 4 4 1
+beepers 4 6 1
+beepers 4 8 1
+beepers 5 3 1
+beepers 5 5 1
+beepers 5 7 1
+beepers 5 9 1
+beepers 6 4 1
+beepers 6 6 1
+beepers 6 8 1
+beepers 7 5 1
+beepers 7 7 1
+beepers 8 6 1
+
+ 
+

@@ -1,0 +1,157 @@
+Francesco Messina
+Assignment 4
+4/28/22
+
+img2-stamp0:
+	file: img2-stamp0: x86 boot sector, mkdosfs boot message display, code offset 0x3c, OEM-ID "mkfs.fat", sectors/cluster 4, root entries 512, sectors 2048 (volumes <=32 MB) , Media descriptor 0xf8, sectors/FAT 2, heads 64, serial number 0x30e01810, unlabeled, FAT (12 bit)
+	
+	mmstat: Cannot determine partition type
+
+		mmls: Cannot determine partition type
+
+	fiwalk:
+	‘$MBR’(Hidden)
+	‘$FAT1’(Hidden)
+	‘$FAT2’(Hidden)
+	‘$OrphanFiles’(Hidden)
+
+	tsk_loaddb -v img2-stamp0: TskAutoDb::commitAddImage: Committing add image process
+	Database stored at: img2-stamp0.db
+
+	tsk_recover img2-stamp0 recover0.db: Files Recovered: 0
+
+	fls -r img2-stamp0:
+
+	v/v 32691:      $MBR
+	v/v 32692:      $FAT1
+	v/v 32693:      $FAT2
+	V/V 32694:      $OrphanFiles
+
+	fls -r -m mactime img2-stamp0:
+	0|mactime/$MBR|32691|v/v---------|0|0|512|0|0|0|0
+	0|mactime/$FAT1|32692|v/v---------|0|0|1024|0|0|0|0
+	0|mactime/$FAT2|32693|v/v---------|0|0|1024|0|0|0|0
+	0|mactime/$OrphanFiles|32694|V/V---------|0|0|0|0|0|0|0
+		
+img2-stamp1:
+	file: img2-stamp1: x86 boot sector, mkdosfs boot message display, code offset 0x3c, OEM-ID "mkfs.fat", sectors/cluster 4, root entries 512, sectors 2048 (volumes <=32 MB) , Media descriptor 0xf8, sectors/FAT 2, heads 64, serial number 0x30e01810, unlabeled, FAT (12 bit)
+
+	mmstat: Cannot determine partition type
+
+	mmls: Cannot determine partition type
+
+	fiwalk: 
+		‘declarations’(Directory)
+		‘declarations/.’(indexing operator)
+		‘declarations/..’(indexing operator)
+		‘declarations/abjuration.txt’(‘r’ Text File)
+		‘declarations/declaration.txt’(‘r’ Text File)
+		‘other’(Directory)
+		‘other/.’(indexing operator)
+		‘other/..’(indexing operator)
+		‘other/btrfs-tools’(Directory)
+		‘other/btrfs-tools/.’(indexing operator)
+		‘other/btrfs-tools/..’(indexing operator)
+		‘other/btrfs-tools/changelog.Debian.gz’(‘r’ zip file)
+		‘other/btrfs-tools/changelog.gz’(‘r’ zip file)
+		‘other/btrfs-tools/copyright’(‘r’ File)
+		‘hosts’(‘r’ File)
+		‘$MBR’(Hidden)
+		‘$FAT1’(Hidden)
+		‘$FAT2’(Hidden)
+		‘$OrphanFiles’(Hidden)
+		
+	tsk_recover img2-stamp1 recover1.db: Files Recovered: 0
+		
+	fls -r img2-stamp1:
+	d/d 4:  declarations
+	+ r/r 583:      abjuration.txt
+	+ r/r 586:      declaration.txt
+	d/d 6:  other
+	+ d/d 646:      btrfs-tools
+	++ r/r 1799:    changelog.Debian.gz
+	++ r/r 1801:    changelog.gz
+	++ r/r 1803:    copyright
+	r/r 8:  hosts
+	v/v 32691:      $MBR
+	v/v 32692:      $FAT1
+	v/v 32693:      $FAT2
+	V/V 32694:      $OrphanFiles
+
+	fls -r -m mactime img2-stamp1:
+	0|mactime/declarations|4|d/drwxrwxrwx|0|0|2048|1523851200|1523916566|0|1523916566
+	0|mactime/declarations/abjuration.txt|583|r/rrwxrwxrwx|0|0|21089|1523851200|1523916556|0|1523916556
+	0|mactime/declarations/declaration.txt|586|r/rrwxrwxrwx|0|0|9530|1523851200|1523916566|0|1523916566
+	0|mactime/other|6|d/drwxrwxrwx|0|0|2048|1523851200|1523916586|0|1523916586
+	0|mactime/other/btrfs-tools|646|d/drwxrwxrwx|0|0|2048|1523851200|1523565902|0|1523916586
+	0|mactime/other/btrfs-tools/changelog.Debian.gz|1799|r/rrwxrwxrwx|0|0|7029|1523505600|1474566484|0|1523916586
+	0|mactime/other/btrfs-tools/changelog.gz|1801|r/rrwxrwxrwx|0|0|7927|1523505600|1474473592|0|1523916586
+	0|mactime/other/btrfs-tools/copyright|1803|r/rrwxrwxrwx|0|0|2279|1523505600|1474566418|0|1523916586
+	0|mactime/hosts|8|r/rrwxrwxrwx|0|0|204|1523851200|1523916536|0|1523916536
+	0|mactime/$MBR|32691|v/v---------|0|0|512|0|0|0|0
+	0|mactime/$FAT1|32692|v/v---------|0|0|1024|0|0|0|0
+	0|mactime/$FAT2|32693|v/v---------|0|0|1024|0|0|0|0
+	0|mactime/$OrphanFiles|32694|V/V---------|0|0|0|0|0|0|0
+
+	
+img2-stamp2:
+	file: img2-stamp2: x86 boot sector, mkdosfs boot message display, code offset 0x3c, OEM-ID "mkfs.fat", sectors/cluster 4, root entries 512, sectors 2048 (volumes <=32 MB) , Media descriptor 0xf8, sectors/FAT 2, heads 64, serial number 0x30e01810, unlabeled, FAT (12 bit)
+
+	mmstat: Cannot determine partition type
+
+	mmls: Cannot determine partition type
+
+	fiwalk: 
+		‘declarations’(Directory)
+		‘declarations/.’(indexing operator)
+		‘declarations/..’(indexing operator)
+		‘declarations/abjuration.txt’(‘r’ Text File)
+		‘declarations/declaration.txt’(‘r’ Text File)
+		‘other’(Directory)
+		‘other/.’(indexing operator)
+		‘other/..’(indexing operator)
+		‘other/btrfs-tools’(Directory)
+		‘other/btrfs-tools/.’(indexing operator)
+		‘other/btrfs-tools/..’(indexing operator)
+		‘other/btrfs-tools/changelog.Debian.gz’(‘r’ zip file)
+		‘other/btrfs-tools/changelog.gz’(‘r’ zip file)
+		‘other/btrfs-tools/copyright’(‘r’ File)
+		‘hosts’(‘r’ File)
+		‘$MBR’(Hidden)
+		‘$FAT1’(Hidden)
+		‘$FAT2’(Hidden)
+		‘$OrphanFiles’(Hidden)
+
+	tsk_recover img2-stamp2 recover2.db: Files Recovered: 6
+
+	fls -r img2-stamp2
+		d/d * 4:        declarations
+		+ r/r * 583:    abjuration.txt
+	+ r/r * 586:    declaration.txt
+	d/d * 6:        other
+	+ d/d * 646:    btrfs-tools
+	++ r/r * 1799:  changelog.Debian.gz
+	++ r/r * 1801:  changelog.gz
+	++ r/r * 1803:  copyright
+	r/r * 8:        hosts
+	v/v 32691:      $MBR
+	v/v 32692:      $FAT1
+	v/v 32693:      $FAT2
+	V/V 32694:      $OrphanFiles
+
+
+	fls -r -m mactime img2-stamp2
+	0|mactime/declarations (deleted)|4|d/drwxrwxrwx|0|0|2048|1523851200|1523916566|0|1523916566
+	0|mactime/declarations/abjuration.txt (deleted)|583|r/rrwxrwxrwx|0|0|21089|1523851200|1523916556|0|1523916556
+	0|mactime/declarations/declaration.txt (deleted)|586|r/rrwxrwxrwx|0|0|9530|1523851200|1523916566|0|1523916566
+	0|mactime/other (deleted)|6|d/drwxrwxrwx|0|0|2048|1523851200|1523916586|0|1523916586
+	0|mactime/other/btrfs-tools (deleted)|646|d/drwxrwxrwx|0|0|2048|1523851200|1523565902|0|1523916586
+	0|mactime/other/btrfs-tools/changelog.Debian.gz (deleted)|1799|r/rrwxrwxrwx|0|0|7029|1523505600|1474566484|0|1523916586
+	0|mactime/other/btrfs-tools/changelog.gz (deleted)|1801|r/rrwxrwxrwx|0|0|7927|1523505600|1474473592|0|1523916586
+	0|mactime/other/btrfs-tools/copyright (deleted)|1803|r/rrwxrwxrwx|0|0|2279|1523505600|1474566418|0|1523916586
+	0|mactime/hosts (deleted)|8|r/rrwxrwxrwx|0|0|204|1523851200|1523916536|0|1523916536
+	0|mactime/$MBR|32691|v/v---------|0|0|512|0|0|0|0
+	0|mactime/$FAT1|32692|v/v---------|0|0|1024|0|0|0|0
+	0|mactime/$FAT2|32693|v/v---------|0|0|1024|0|0|0|0
+	0|mactime/$OrphanFiles|32694|V/V---------|0|0|0|0|0|0|0
+

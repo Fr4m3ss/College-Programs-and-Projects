@@ -1,0 +1,16 @@
+15
+Bethryn Esvele	Bewitching Song	Kold Steele	16
+Thruchet	Flaming Strike	Grendain	4
+Fran Solo	Shot with Crossbow	Patpat	8
+Patpat	Strike with Longsword	Thruchet	12
+Kold Steele	Unarmed Strike	Grendain	13
+Grendain	Whip of Fire	Bethryn Esvele	10
+Fran Solo	Shot with Crossbow	Patpat	17
+Thruchet	Poison Dart	Bethryn Esvele	11
+Kold Steele	Unarmed Strike	Grendain	11
+Bethryn Esvele	Bewitching Song	Thruchet	16
+Patpat	Strike with Longsword	Fran Solo	12
+Grendain	Whip of Fire	Thruchet	11
+Fran Solo	Shot with Crossbow	Kold Steele	15
+Kold Steele	Unarmed Strike	Patpat	18
+Patpat	Strike with Longsword	Grendain	13

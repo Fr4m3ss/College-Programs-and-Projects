@@ -1,0 +1,37 @@
+Student Grade Summary
+---------------------
+
+ENGLISH CLASS
+
+Student                                   Final Final   Letter
+Name                                      Exam  Avg     Grade
+----------------------------------------------------------------------
+Marvin Dipwart                            90    84.25   B
+Kim Kardashian                            78    71.40   C
+
+
+HISTORY CLASS
+
+Student                                   Final Final   Letter
+Name                                      Exam  Avg     Grade
+----------------------------------------------------------------------
+Walter White                              91    85.10   B
+James T. Kirk                             88    80.80   B
+
+
+MATH CLASS
+
+Student                                   Final Final   Letter
+Name                                      Exam  Avg     Grade
+----------------------------------------------------------------------
+Daffy Duck                                93    94.69   A
+Jimmy Crack Corn                          68    64.44   D
+
+
+OVERALL GRADE DISTRIBUTION
+
+A:   1
+B:   3
+C:   1
+D:   1
+F:   0

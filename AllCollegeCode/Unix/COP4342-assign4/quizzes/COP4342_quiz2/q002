@@ -1,0 +1,5 @@
+How can use you use echo as a rough substitute for ls?
+echo *
+echo *
+echo $(ls)
+echo < <(ls)

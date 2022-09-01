@@ -1,0 +1,8 @@
+Reading input:
+big O(n), all done in while loop
+
+Storing input:
+big O(log(n)), insert function of a map is log(n)
+
+Sorting/Printing 10 for each:
+big O(n^2), nested for loops to iterate through

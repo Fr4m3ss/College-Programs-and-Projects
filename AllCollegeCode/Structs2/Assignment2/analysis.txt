@@ -1,0 +1,9 @@
+Worst-case run-time complexities (in Big-O notation) of:
+
+reverse()
+While loop running until current pointer becomes the nullopointer value, and it starts at the head, incrementing to the next value each loop. This means current pointer will become the nullpointer once it hits the end of the list.
+Therefore, the time complexity would be O(n) in Big O
+
+remove_if()
+For loop would execute until the iterator is not end value, and there is an if for the iterator, which if true, then it would call the erase function.
+Big O is O(nlog(n))

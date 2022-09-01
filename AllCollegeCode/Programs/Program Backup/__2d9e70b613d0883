@@ -1,0 +1,196 @@
+/*Name: Frankie Messina
+ *Date: 12/4/2019
+ *Section: 4
+ *Assignment: 7 (Program 2 - Dungeons and Dragons)
+ *Due Date: 12/6/2019
+ *About this project: The purpose of this assignment is to make sure:
+ *You are familiar with certain basic unix commands and can use them effectively.
+ *You are familiar with the basics of shell scripting
+ *You understand and can work with strings in C++, both C-Strings and C++ string objects.
+ *You are familiar with dynamic memory allocation and two dimensional arrays.
+ *You are familiar with the concepts of bounds checking and maintaining state.
+ *You can work with pointers, structures, and files in C++.
+ *You can approach a complex problem, break it down into various parts, and put together a solution.
+ *Assumptions: The snake will never do a 180 degree turn. The first turn will work with the location of the gate. The gate will never be at the corner, and the obstacles will not block entry into the field. The snake will be able to move the given number of spots in the given direction without running into a wall.
+ *All work below was performed by Frankie Messina.
+ */
+
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+struct Move
+{
+	char name[50];
+	int damage;
+};
+
+struct Character
+{
+	char name[50];
+	char char_class[50];
+	int hitPoints;
+	int armorClass;
+	bool isAlive;
+	char moveName[50];
+};
+
+struct Attack
+{
+	char name[50];
+	char moveName[50];
+	char target[50];
+	int roll;
+};
+
+void print1(Move m, ofstream &out);
+void print2(Character m, ofstream &out);
+void print3(Attack m, ofstream &out);
+
+int main()
+{
+	Move *moves;
+	Character *characters;
+	Attack *attacks;
+	int m;
+	int n;
+	int k;
+	char placeholder[50];
+
+	ifstream(input);
+	input.open("characters.txt");
+	if(!input)
+	{
+		cout<<"Error opening file \"characters.txt\""<<endl;
+	}
+	else
+	{
+		input>>m;
+		moves = new Move[m];
+	
+		for(int i = 0; i<m; i++)
+		{	
+			input.getline(moves[i].name,50 ,'\t');
+			input>>moves[i].damage;
+			input.getline(placeholder,50,'\n');
+		}
+		
+		input>>n;
+		characters = new Character[n];
+		input.ignore();	
+	
+		for(int i = 0; i<n; i++)
+		{	
+			input.getline(characters[i].name,50,'\t');
+			input.getline(characters[i].char_class,50 ,'\t');
+			input>>characters[i].hitPoints;
+			input>>characters[i].armorClass;
+			input.getline(placeholder,50,'\t');
+			input.getline(characters[i].moveName,50,'\n');
+			characters[i].isAlive=true;
+		}
+
+	}
+
+	input.close();
+		
+	input.open("session.txt");
+        if(!input)
+        {
+                cout<<"Error opening file \"session.txt\""<<endl;
+        }
+        else
+        {
+                input>>k;
+        	attacks = new Attack[k];
+		for(int i = 0; i<k; i++)
+		{
+			input.getline(attacks[i].name, 50, '\t');
+                        input.getline(attacks[i].moveName, 50,'\t');
+                        input.getline(attacks[i].target, 50, '\t');
+			input>>attacks[i].roll;
+			input.getline(placeholder,50,'\n');
+		}
+	}
+
+        input.close();
+
+	for(int i = 0; i<k; i++)
+	{
+		for(int j = 0; j<n; j++)
+		{
+			if(attacks[i].name==characters[j].name&&attacks[i].moveName==characters[j].moveName&&characters[j].isAlive)
+			{
+				for(int k = 0; k<n; k++)
+				{
+					if(attacks[i].target==characters[k].name&&attacks[i].roll>=characters[k].armorClass&&characters[k].isAlive)
+					{
+						for(int l = 0; l<m; l++)
+						{
+							if(attacks[i].moveName==moves[l].name)
+							{
+								characters[k].hitPoints=characters[k].hitPoints-moves[l].damage;
+								if(characters[k].hitPoints<0)
+								{
+									characters[k].isAlive=false;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	
+
+
+
+	ofstream(output);
+	output.open("alive.txt");
+
+	if(!output)
+	{
+		cout<<"Output Failed"<<endl;
+	}
+	else
+	{
+		for(int i = 0; i<m; i++)
+		{
+			print1(moves[i], output);
+		}
+		for(int i = 0; i<n; i++)
+		{
+			print2(characters[i], output);
+		}
+		for(int i = 0; i<k; i++)
+		{
+			print3(attacks[i], output);
+		}
+		for(int i = 0; i<n; i++)
+		{
+			if(characters[i].isAlive)
+			{
+				out<<characters[i].name<<" "<<characters[i].hitPoints<<endl;
+			}
+		}
+	}
+	
+	return 0;
+}
+
+void print1(Move m, ofstream &out)
+{
+	out<<m.name<<" "<<m.damage<<endl;
+}
+
+void print2(Character m, ofstream &out)
+{
+	out<<m.name<<" "<<m.char_class<<" "<<m.hitPoints<<" "<<m.armorClass<<" "<<m.moveName<<endl;
+}
+
+void print3(Attack m, ofstream &out)
+{
+	out<<m.name<<" "<<m.moveName<<" "<<m.target<<" "<<m.roll<<" "<<endl;
+}

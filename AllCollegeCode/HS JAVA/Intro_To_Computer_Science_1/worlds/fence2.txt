@@ -1,0 +1,7 @@
+beepers 1 2 1
+beepers 1 3 1
+beepers 1 5 1
+beepers 1 8 1
+beepers 2 3 1
+beepers 3 3 1
+beepers 2 5 1

@@ -1,0 +1,1 @@
+The Big-O Evaluation of my makeEmpty function is of O(n), because it only traverses the tree, meaning it will be linear.

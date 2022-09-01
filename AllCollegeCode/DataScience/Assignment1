@@ -1,0 +1,102 @@
+Frankie Messina - FAM19B
+
+1. select length from movies where rating='G';
++--------+
+| length |
++--------+
+|     85 |
++--------+
+1 row in set (0.01 sec)
+
+2. [selection symbol]rating = "G"(movies)
+
+3. select distinct theaters.Phone, districts.name from theaters, districts where theaters.name like "Boeing Imax Theater%";
++----------------+----------------+
+| Phone          | name           |
++----------------+----------------+
+| (206) 443-4629 | CAPITOL HILL   |
+| (206) 443-4629 | THE U DISTRICT |
+| (206) 443-4629 | DOWNTOWN       |
++----------------+----------------+
+3 rows in set (0.00 sec)
+
+4. [projection symbol]name, phone([selection symbol]name = "Boeing Imax Theater"(theaters))
+
+5. select title, length, movietime from movies2theaters, movies, theaters where theaters.name = "Cineplex Odeon Uptown";
+5974 rows in set (0.01 sec)
+
+6. [projection symbol]title, length, movietime([selection symbol]theaters.name = "Cineplex Odeon Uptown"(movies2theaters*movies*theaters))
+
+7. 
+		[projection symbol]
+ 		       /  \
+title, length, movietime   [selection symbol]
+				/	   \
+theaters.name = "Cineplex Odeon Uptown"     *
+  				        /   |    \
+			 movies2theaters  movies  theaters
+8. select distinct districts.name from districts, theaters, movies where movies.title = "Chicken Run" > 1 or movies.rating = 'PG';
++----------------+
+| name           |
++----------------+
+| CAPITOL HILL   |
+| THE U DISTRICT |
+| DOWNTOWN       |
++----------------+
+3 rows in set (0.00 sec)
+
+9. select avg(length) from movies, theaters where theaters.name like"Landmark Neptune%";
++-------------+
+| avg(length) |
++-------------+
+|    104.7586 |
++-------------+
+1 row in set (0.00 sec)
+
+10. select count(*) from movies, theaters where theaters.name like "Landmark Metro Cinemas%" and movies.length < 120;
++----------+
+| count(*) |
++----------+
+|       23 |
++----------+
+1 row in set (0.00 sec)
+
+11. select distinct theaters.name, theaters.address from theaters, movies2theaters group by theaters.name having count(distinct movies2theaters.moviec
+Empty set (0.02 sec)
+
+12. select name, phone, count(distinct title) from movies, theaters order by name desc;                                          
++----------------------------+----------------+-----------------------+
+| name                       | phone          | count(distinct title) |
++----------------------------+----------------+-----------------------+
+| Cineplex Odeon City Centre | (206) 622-6465 |                    29 |
++----------------------------+----------------+-----------------------+
+1 row in set (0.00 sec)
+
+13. select theaters.name,theaters.phone from ((((districts inner join theaters2districts on districts.districtcode=theaters2districts.districtcode)inner join movies2theaters on theaters2districts.theatercode=movies2theaters.theatercode)inner join theaters on movies2theaters.theatercode= theaters.theatercode) inner join movies on movies2theaters.moviecode= movies.moviecode) where districts.name='capitol hill' and rating='r' group by theaters.name having max(movies.length) order by theaters.name;
++----------------------------------+----------------+
+| name                             | phone          |
++----------------------------------+----------------+
+| Cineplex Odeon City Centre       | (206) 622-6465 |
+| Cineplex Odeon Meridian          | (206) 223-9600 |
+| General Cinema Cinerama          | (206) 441-3080 |
+| General Cinema Pacific Place 11  | (206) 652-2404 |
+| Landmark Broadway Market Cinemas | (206) 323-0231 |
+| Landmark Guild 45th              | (206) 633-3353 |
+| Landmark Harvard Exit Theatre    | (206) 323-8986 |
+| Landmark Metro Cinemas           | (206) 633-0055 |
+| Landmark Seven Gables Theatre    | (206) 632-8820 |
+| Landmark Varsity Theatre         | (206) 632-3131 |
++----------------------------------+----------------+
+10 rows in set (0.01 sec)
+
+14. [projection symbol]theaters.Address, theaters.Phone ((theaters join movies2theaters join ([selection symbol]Title = "Frozen" (movies))))
+
+15.                              [projectin symbol]
+		    		 /  		  \
+    theaters.Address, theaters.Phone             join
+    						/    \
+					theaters     join
+						    /    \
+				      movies2theaters    [selection symbol]
+				      			/                  \
+						Title = "Frozen"         movies

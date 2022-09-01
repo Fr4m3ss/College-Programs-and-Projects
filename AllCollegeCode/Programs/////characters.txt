@@ -1,0 +1,17 @@
+9
+Eldritch Blast	6
+Strike with Longsword	7
+Magic Missile	10
+Shot with Crossbow	5
+Unarmed Strike	4
+Whip of Fire	3
+Slingshot	3
+Poison Dart	4
+Bewitching Song	5
+6
+Bethryn Esvele	Oracle	17	10	Bewitching Song
+Patpat	Barbarian	25	16	Strike with Longsword
+Kold Steele	Fighter	27	14	Unarmed Strike
+Grendain	Sorcerer	14	11	Whip of Fire
+Fran Solo	Rouge	18	12	Shot with Crossbow
+Thruchet	Druid	15	10	Poison Dart

@@ -1,0 +1,10 @@
+eastwestwalls 4 3 3
+eastwestwalls 5 3 3
+eastwestwalls 6 4 6
+eastwestwalls 2 4 6
+
+northsouthwalls 3 3 4
+northsouthwalls 3 6 6
+northsouthwalls 6 3 6
+
+beepers 3 3 1

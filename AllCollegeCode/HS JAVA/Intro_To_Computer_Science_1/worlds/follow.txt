@@ -1,0 +1,8 @@
+northsouthwalls 2 2 2
+northsouthwalls 2 3 3
+northsouthwalls 7 2 2
+northsouthwalls 2 7 7
+northsouthwalls 7 7 7 
+eastwestwalls 7 2 2 
+eastwestwalls 7 8 8
+
